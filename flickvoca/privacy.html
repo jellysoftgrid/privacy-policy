@@ -58,23 +58,40 @@
       flex-wrap: wrap;
       gap: 12px;
     }
-    .lang-switcher {
+    .badge {
+      background: #EDF2F7;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #4A5568;
+      display: inline-block;
+    }
+    .nav-controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .nav-group {
       display: inline-flex;
       background: #EDF2F7;
       padding: 4px;
       border-radius: 8px;
       font-size: 13px;
     }
-    .lang-switcher a {
+    .nav-group a {
       padding: 4px 12px;
       border-radius: 6px;
       color: #4A5568;
       text-decoration: none;
       font-weight: 500;
+      transition: background-color 0.15s ease;
     }
-    .lang-switcher a.active {
+    .nav-group a.active {
       background: #3182CE;
       color: #FFFFFF;
+    }
+    .nav-group a:hover:not(.active) {
+      background: #E2E8F0;
     }
     table {
       width: 100%;
@@ -103,10 +120,16 @@
 <body>
   <div class="container">
     <div class="top-bar">
-      <div class="badge">최종 수정일: 2026년 10월 30일 | 패키지명: com.jellysoftgrid.flickvoca</div>
-      <div class="lang-switcher">
-        <a href="privacy.html" class="active">한국어</a>
-        <a href="privacy_en.html">English</a>
+      <div class="badge">최종 수정일: 2026년 11월 6일 | 패키지명: com.jellysoftgrid.flickvoca</div>
+      <div class="nav-controls">
+        <div class="nav-group">
+          <a href="terms.html">이용약관</a>
+          <a href="privacy.html" class="active">개인정보처리방침</a>
+        </div>
+        <div class="nav-group">
+          <a href="privacy.html" class="active">한국어</a>
+          <a href="privacy_en.html">English</a>
+        </div>
       </div>
     </div>
 
